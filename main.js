@@ -54,3 +54,19 @@
 // liEven.forEach(liEven =>{
 //     liEven.style.background = 'green'
 // });
+
+ const li = document.createElement('li');
+ const link = document.createElement('a');
+ const ul = document.querySelectorAll('ul');
+
+ li.className = "collection-item";
+ link.className = "delete-item secondary-content";
+
+ li.innerHTML = "Hannah is an unclutured vulture";
+ link.innerHTML = ` <i class="fa fa-remove"></i>`;
+
+ document.querySelector("ul.collection").appendChild(li)
+ li.appendChild(link);
+
+ console.log(li);
+ console.log(link);
