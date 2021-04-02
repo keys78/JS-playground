@@ -55,18 +55,50 @@
 //     liEven.style.background = 'green'
 // });
 
- const li = document.createElement('li');
- const link = document.createElement('a');
- const ul = document.querySelectorAll('ul');
+// CREATING A NEW ELEMENT
 
- li.className = "collection-item";
- link.className = "delete-item secondary-content";
+//  const li = document.createElement('li');
+//  const link = document.createElement('a');
+//  const ul = document.querySelectorAll('ul');
 
- li.innerHTML = "Hannah is an unclutured vulture";
- link.innerHTML = ` <i class="fa fa-remove"></i>`;
+//  li.className = "collection-item";
+//  link.className = "delete-item secondary-content";
 
- document.querySelector("ul.collection").appendChild(li)
- li.appendChild(link);
+//  li.innerHTML = "Hannah is an unclutured vulture";
+//  link.innerHTML = ` <i class="fa fa-remove"></i>`;
 
- console.log(li);
- console.log(link);
+//  document.querySelector("ul.collection").appendChild(li)
+//  li.appendChild(link);
+
+//  console.log(li);
+//  console.log(link);
+
+// CREATING AND REPLACING ELEMENT 
+
+let newHeading = document.createElement('h2');
+
+newHeading.id = "task-title";
+
+newHeading.appendChild(document.createTextNode("Task List"));
+
+let old = document.getElementById('task-title');
+
+let carda = document.querySelector('.card-action');
+
+carda.replaceChild(newHeading, old);
+
+console.log(newHeading);
+console.log(old);
+
+
+const lis = document.querySelectorAll('li');
+const list = document.querySelector('ul');
+
+//remove list item
+lis[0].remove();
+
+//remove childelement
+list.removeChild(lis[3]);
+
+//Classes and attr
+const firstLi = document
