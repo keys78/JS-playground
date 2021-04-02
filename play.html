@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        div{
+            position: absolute;
+            padding:100px;
+            margin:20%;
+            background-color: #ccc;
+            border:1px solid black;
+        }
+        
+        .koko{
+            padding: 15px 60px;
+            border:1px solid black;
+        }
+
+        .btn{
+            padding: 20px 39px;
+            background-color: red;
+            color:white;
+            cursor: pointer;
+        }
+    </style>
+<body>
+
+    <div>
+        <label for="text">Add name</label>
+        <input class="koko" type="text" id="firstname">
+        <button class="btn" id=btn>Login</button>
+    </div>
+
+    <script>
+        const text = document.querySelector('#firstname')
+        const btn = document.querySelector('#btn');
+
+        btn.addEventListener('click', checkit);
+
+        function checkit(){
+            if(text.value === ""){
+            alert('Add a task')
+            }
+            console.log("present");
+        }
+
+    </script>
+    
+</body>
+</html>
