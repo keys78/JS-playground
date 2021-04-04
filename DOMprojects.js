@@ -16,6 +16,10 @@ function loadEventListeners() {
     form.addEventListener('submit', addTask);
     //remove task event
     taskList.addEventListener('click', removeTask);
+    //remove all tasks
+    clearBtn.addEventListener('click', clearAll);
+    //filter events
+    fliter.addEventListener('keyup', filterTasks);
 }
 
 //Add Task
@@ -39,7 +43,7 @@ function addTask(e) {
     link.innerHTML = '<i class="fa fa-remove"></i>';
 
     taskList.appendChild(lis);
-
+ 
     lis.appendChild(link);
 
     taskInput.value = "";
@@ -50,8 +54,27 @@ function addTask(e) {
 
 //remove Task
 function removeTask(e) {
-    if(e.target.parentElement.classList.contains('delete-item'));
-    {
-    console.log(e.target)
+    if(e.target.parentElement.classList.contains('delete-item')) {
+        if(confirm('Are you sure')){
+        e.target.parentElement.parentElement.remove();
+        }
+    }
+}
+
+//clear all
+function clearAll(e) {
+    // taskList.remove();
+
+    while(taskList.firstChild){
+        taskList.removeChild(taskList.firstChild);
+    }
+}
+
+//filter tasks
+function filterTasks(e) {
+    const text = e.target.value.toLowerCase();
+    
+    document.querySelectorAll('collection-item').task => {
+        const item
     }
 }

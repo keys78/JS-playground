@@ -7,6 +7,12 @@
     <title>Document</title>
 </head>
     <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+
         di{
             position: absolute;
             padding:100px;
@@ -31,11 +37,41 @@
             height: 100vh;
             background-color: rgb(16, 0, 61);
         }
+
+        .moce {
+            position: absolute;
+            top:2;
+            color:white;
+        }
+
+        img{
+            position: absolute;
+            bottom: 0;
+            animation: fade 2s linear infinite;
+            width: 100vw;
+
+
+        @keyframes fade {
+            0%{
+                 background-color:red;
+            }
+            50%{
+                background-color:rgb(20, 182, 60);
+            }
+            100%{
+                background-color:rgb(239, 255, 15);
+            }
+        }
+
+        
     </style>
 <body>
+    <div class="moce">
+    <h1>Welcome to anchor Bits</h1>
+    </div>
 
     <div class="good">
-        <img src="Techblock.svg">
+        <img class="kpk" src="Techblock.svg">
     </div>
 
 
