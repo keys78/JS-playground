@@ -2,7 +2,7 @@
 const form = document.querySelector('#task-form');
 const taskList = document.querySelector('.collection');
 const clearBtn = document.querySelector('.clear-tasks');
-const fliter = document.querySelector('#filter');
+const filter = document.querySelector('#filter');
 const taskInput = document.querySelector('#task');
 const popup = document.querySelector('.pop');
 
@@ -19,7 +19,7 @@ function loadEventListeners() {
     //remove all tasks
     clearBtn.addEventListener('click', clearAll);
     //filter events
-    fliter.addEventListener('keyup', filterTasks);
+    filter.addEventListener('keyup', filterTasks);
 }
 
 //Add Task
@@ -73,8 +73,12 @@ function clearAll(e) {
 //filter tasks
 function filterTasks(e) {
     const text = e.target.value.toLowerCase();
-    
-    document.querySelectorAll('collection-item').task => {
-        const item
-    }
+    document.querySelectorAll('.collection-item').forEach(function(task){
+        const item = task.firstChild.textContent;
+        if(item.toLowerCase().indexOf(text) != -1){
+            task.style.display = "block";
+        } else {
+            task.style.display = "none";
+        }
+    });
 }
