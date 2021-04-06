@@ -6,6 +6,7 @@ const area = document.querySelector('#here1');
 const area1 = document.querySelector('#here2');
 
 
+
 btn.addEventListener('click', addTo);
 
 function addTo(e) {
@@ -13,14 +14,11 @@ function addTo(e) {
         alert('fill up form');
     } 
 
-    if(mail.value === '') {
-        alert('fill up mail');
-    } 
-   
-    window.location = "Dash.html";
+   let x = name.value;
 
-    area.innerHTML = name.value;
-    area1.innerHTML = mail.value;
+    localStorage.setItem('name', x);
+   
+    // window.location = "Dash-.html";
 
     
 

@@ -10,21 +10,23 @@
 <body>
     
     
-    <div id="here1" class="mt-10 bg-gray-200 py-2"></div>
+    <input id = "newData" type="text" class="w-11/12 m-auto mt-10 text-black border border-current py-2">
 
-    <div id="here2" class="mt-10 bg-gray-200 py-2"></div>
-    
-
-    <!-- <script>
-        var imageUrl = localStorage.getItem("https://images.pexels.com/photos/691710/pexels-photo-691710.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
-        document.getElementById("profilePic").src = (imageurl);
-    </script> -->
+    <div id = "newDat" type="text" class="w-11/12 m-auto mt-10 text-black bg-gray-100 border border-current py-5">
+    Hi
+    </div>
 
     <script>
-        const image = localStorage.getItem('image')
-        console.log(image);
+        document.addEventListener('DOMContentLoaded', getInfo)
+        const newDat = document.querySelector('#newDat');
+
+    function getInfo(names) {
+        const info = localStorage.getItem('name');
+        newDat.appendChild(document.createTextNode(info));
+    } 
+  
     </script>
-    
-    <script src="JS.JS"></script>
+
+    <!-- <script src="J.JS"></script> -->
 </body>
 </html>
