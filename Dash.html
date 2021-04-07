@@ -9,20 +9,25 @@
 </head>
 <body>
     
-    
-    <input id = "newData" type="text" class="w-11/12 m-auto mt-10 text-black border border-current py-2">
+    <div id = "newDat" type="text" class="w-11/12 m-auto mt-10 text-black bg-gray-100 border border-current py-3">
 
-    <div id = "newDat" type="text" class="w-11/12 m-auto mt-10 text-black bg-gray-100 border border-current py-5">
-    Hi
     </div>
+
+    <div id = "mail" type="text" class="w-11/12 m-auto mt-10 text-black bg-gray-100 border border-current py-3">
+    
+    </div>
+
+
 
     <script>
         document.addEventListener('DOMContentLoaded', getInfo)
         const newDat = document.querySelector('#newDat');
+        const mail = document.querySelector('#mail');
 
     function getInfo(names) {
         const info = localStorage.getItem('name');
         newDat.appendChild(document.createTextNode(info));
+        mail.appendChild(document.createTextNode(localStorage.getItem('mail')));
     } 
   
     </script>
