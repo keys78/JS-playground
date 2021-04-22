@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" >
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container">
+        <form class="formi">
+        
+            <input type="text" class="enterme">
+            <input type="text" class="enteryou">
+            <br>
+            <input type="submit" class="btn" value="SUBMiT">
+
+        </form>
+       
+     
+            <ul class="lists">
+
+
+            </ul>
+   
+    </div>
+    
+
+<script>
+// //item constructor
+// function Items (food, price) {
+//     this.food = food;
+//     this.price = price;
+// }
+
+// //UI constructor
+// function UI () {}
+
+// UI.prototype.addItemToList = function (items) {
+//     const div = document.createElement("div");
+//     const lists = document.querySelector(".lists");
+
+//     lists.className = "text-3xl text-blue-500"
+
+//     div.innerHTML = `
+//     <li>${items.food}</li>
+//     <li>${items.price}</li>
+//     `
+
+//     lists.appendChild(div);
+// }
+
+
+// UI.prototype.clearFields = function () {
+//     document.querySelector(".enterme").value = '';
+//     document.querySelector(".enteryou").value = '';
+// }
+
+
+
+// //create event listener
+// const formi = document.querySelector('.formi');
+
+// formi.addEventListener('submit', addList);
+
+// function addList(e){
+//     const food = document.querySelector(".enterme").value
+//     const price = document.querySelector(".enteryou").value
+    
+   
+//     const items = new Items(food, price);
+
+//     const ui = new UI();
+
+//    ui.addItemToList(items);
+
+//    ui.clearFields();
+
+//     console.log(items);
+    
+//     e.preventDefault();
+// }
+
+
+
+
+//ES6
+class Items{
+    constructor(food, price) {
+    this.food = food;
+    this.price = price;
+    }
+}
+
+class UI {
+    addItemToList(items) {
+        const div = document.createElement("div");
+    const lists = document.querySelector(".lists");
+
+    lists.className = "text-3xl text-blue-500"
+
+    div.innerHTML = `
+    <li>${items.food}</li>
+    <li>${items.price}</li>
+    `
+
+    lists.appendChild(div);
+    }
+
+    clearFields(){
+        document.querySelector(".enterme").value = '';
+       document.querySelector(".enteryou").value = '';
+    }
+}
+
+
+//create event listener
+const formi = document.querySelector('.formi');
+
+formi.addEventListener('submit', addList);
+
+function addList(e){
+    const food = document.querySelector(".enterme").value
+    const price = document.querySelector(".enteryou").value
+    
+   
+    const items = new Items(food, price);
+
+    const ui = new UI();
+
+   ui.addItemToList(items);
+
+   ui.clearFields();
+
+    console.log(items);
+    
+    e.preventDefault();
+}
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

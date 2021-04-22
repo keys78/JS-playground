@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+    //     // Person constructor
+    //     function Person(firstName, lastName) {
+    //         this.firstName = firstName;
+    //         this.lastName = lastName;
+    //     }
+
+    //   //Greeting
+    //   Person.prototype.greeting = function() {
+    //       return `Hello there ${this.firstName} ${this.lastName}`;
+    //   }
+
+    //   const person1 = new Person('Emma', 'Tochi');
+
+    //     console.log(person1.greeting());
+
+
+
+    //   //Customer
+    //   function Customer(firstName, lastName, phone, membership) {
+    //       Person.call(this, firstName, lastName)
+     
+
+    //       this.phone = phone;
+    //       this.membership = membership;
+    //   }
+
+    //   //Inherit the person protype methods
+    //   Customer.prototype = Object.create(Person.prototype);
+
+    //   //Make customer.prototype return Customer()
+    //   Customer.prototype.constructor = Customer;
+
+    // const customer1 = new Customer('James', 'Milner', '444-444', 'Gold');
+
+    //   //Customer greeting
+    //   Customer.prototype.greeting = function() {
+    //       return `Hello there ${this.firstName} ${this.lastName} Welcome to our company`;
+    //   }
+
+
+    // console.log(customer1)
+    // console.log(customer1.greeting());
+
+
+
+    class Person {
+        constructor(firstName, lastName, dob) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.birthday = new Date(dob);
+        }
+        greeting() {
+            return `Hello there ${this.firstName} ${this.lastName}`;
+        }
+        calculateAge() {
+            return ` ${this.dob} {-} `
+        }
+    }
+
+    const mary = new Person('Mary', 'Williams', '11-13-1980');
+
+
+
+    console.log(mary);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

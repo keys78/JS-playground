@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"crossorigin="anonymous"/>
     <title>Document</title>
 </head>
     <style>
@@ -64,16 +66,63 @@
             }
         }
 
+        .bd{
+            height: 50vh;
+            width: 50vw;
+            border-radius: 100% 0% 100% 0% / 0% 40% 60% 100%;
+            background-color: purple;
+            color:white;
+        }
+
+        input{
+            border:1px solid black;
+            padding:20px 1px;
+            width: 200px;
+            background-color: white;
+            color:black;
+        }
+
         
     </style>
 <body>
-    <div class="moce">
+
+
+    <div class="bd">
+
+        <h1  class="text-white text-6xl">774nbgunf84389n43yfg</h1>
+        <div class="flex w-4/12 justify-between">
+        <input id="kolo" type="text" value="3jfijs7ssf9s6089fsy8bsfgcy8s"disabled>
+        <button class="text-4xl font-extrabold border border-current" onclick="copyToClipboard()"><i class="far fa-copy"></i></button>
+        </div>
+
+    </div>
+
+
+
+
+
+<script>
+function copyToClipboard(text) {
+var inputc = document.body.appendChild(document.createElement("input"));
+const kolo = document.getElementById('kolo');
+inputc.value = kolo.value;
+inputc.focus();
+inputc.select();
+document.execCommand('copy');
+inputc.parentNode.removeChild(inputc);
+alert("URL Copied.");
+}
+</script>
+
+
+
+    <!-- <div class="moce">
     <h1>Welcome to anchor Bits</h1>
     </div>
 
     <div class="good">
         <img class="kpk" src="Techblock.svg">
-    </div>
+    </div> -->
 
 
 <!-- 

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" >
+    <title>Document</title>
+</head>
+<body>
+    
+    <section class="w-6/12 mx-auto mt-20">
+            <!-- The above form looks like this -->
+        <form class="formi">
+            <div class="row">
+            <div class="six columns">
+                <label for="exampleEmailInput">Your email</label>
+                <input class="u-full-width" type="text" placeholder="test@mailbox.com" id="exampleEmailInput">
+            </div>
+            <div class="six columns">
+                <label for="exampleRecipientInput">Reason for contacting</label>
+                <input class="u-full-width" type="text" id="exampleRecipientInput">
+    
+            </div>
+            </div>
+            <label for="exampleMessage">Message</label>
+            <textarea class="u-full-width" placeholder="Hi Dave …" id="exampleMessage"></textarea>
+            <label class="example-send-yourself-copy">
+            <input type="checkbox">
+            <span class="label-body">Send a copy to yourself</span>
+            </label>
+            <input class="button-primary" type="submit" value="Submit">
+        </form>
+
+    </section>
+
+    <section class="w-6/12 mx-auto mt-10">
+    
+        <div class="flex justify-between items-center flex justify-between items-center">
+            <div class="mailo text-3xl text-blue-500 "></div>
+            <div class=""></div>
+        </div>
+
+        <div class="reason"></div>
+        <div class="message"></div>
+    
+    </section>
+
+
+<script>
+
+//create es6 constructor
+class Info {
+    constructor (mail, reason, message){
+        this.mail = mail;
+        this.reason = reason;
+        this.message = message;
+    }
+}
+
+class UI {
+    addToInfo(Infos){
+        const div = document.createElement("div");
+        const cunt = document.querySelector('.mailo')
+
+        div.classList = "flex justify-between w-full gap-12"
+
+        div.innerHTML = `
+        <div>${Infos.mail}</div>
+        <div>${Infos.reason}</div>
+        <div>${Infos.message}</div>
+        <div><a href="#">X</a></div>
+        `
+        cunt.appendChild(div);
+
+    }
+}
+
+
+
+
+//Add addEventListener
+const formi = document.querySelector('.formi');
+formi.addEventListener('submit', addInfo);
+
+function addInfo(e) {
+   const mail = document.getElementById('exampleEmailInput').value
+   const reason = document.getElementById('exampleRecipientInput').value
+   const message = document.getElementById('exampleMessage').value
+
+    const Infos = new Info(mail, reason, message)
+
+    const ui = new UI();
+
+    ui.addToInfo(Infos);
+
+    console.log(Infos)
+    e.preventDefault();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
