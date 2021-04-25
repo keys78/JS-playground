@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <title>Document</title>
+</head>
+<style>
+    .rosoh{
+    position: absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+	box-sizing:border-box;
+    overflow-y: hidden;
+
+	}
+
+</style>
+<body class="bg-blue-900">
+    <div id="loader" class="animate__animated animate__slideOutUp animate__delay-4s animate__slow out fixed top-0 h-screen w-full bg-black">
+        <img class="rosoh" src="cryloader.gif">
+    </div>
+
+    <h1c class="text-white">Welcome</h1>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+         const roso = document.getElementById('loader');
+         const rosoh = document.querySelector('.rosoh');
+
+         setTimeout(function(){
+                rosoh.remove();
+            }, 4000);
+         setTimeout(function(){
+                roso.remove();
+            }, 6000);
+        });  
+    </script>
+    
+</body>
+</html>

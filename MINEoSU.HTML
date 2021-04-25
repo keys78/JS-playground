@@ -10,7 +10,7 @@
 </head>
 <body>
     
-    <section class="w-6/12 mx-auto mt-20">
+    <section class="sectio w-6/12 mx-auto mt-20">
             <!-- The above form looks like this -->
         <form class="formi">
             <div class="row">
@@ -70,10 +70,23 @@ class UI {
         <div>${Infos.mail}</div>
         <div>${Infos.reason}</div>
         <div>${Infos.message}</div>
-        <div><a href="#">X</a></div>
+        <div><a class="delete" href="#">X</a></div>
         `
         cunt.appendChild(div);
 
+    }
+    clearFields(){
+        // formi.reset();
+     document.getElementById('exampleEmailInput').value = "";
+     document.getElementById('exampleRecipientInput').value = "";
+     document.getElementById('exampleMessage').value = "";
+    }
+
+    removeFromList(target) {
+            if(target.className === 'delete') {
+               target.parentElement.parentElement.remove();
+               myAlert();
+            }
     }
 }
 
@@ -95,15 +108,47 @@ function addInfo(e) {
 
     ui.addToInfo(Infos);
 
-    console.log(Infos)
+    ui.clearFields();
+
+    
+    console.log(ui)
+    // console.log(Infos)
     e.preventDefault();
 }
 
 
 
+document.querySelector('.mailo').addEventListener('click', removeList);
+
+function removeList(e){
+
+    const ui = new UI();
+    ui.removeFromList(e.target);
+
+    
+   
+    
+    e.preventDefault();
+}
+
+function myAlert(){
+    const mdiv = document.createElement("div");
+
+    mdiv.classList = "w-full bg-red-500 text-white text-2xl text-center";
+    mdiv.innerHTML = "Deleted From List";
+
+    const sectio = document.querySelector(".sectio");
+    const mebi = document.querySelector('.formi');
+    
+
+    sectio.insertBefore(mdiv, mebi );
+
+    setTimeout(function() {
+        mdiv.remove();
+    }, 2000)
 
 
-
+}
 
 
 

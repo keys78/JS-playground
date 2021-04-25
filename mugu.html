@@ -111,9 +111,11 @@ class UI {
     }
 
     clearFields(){
-        document.querySelector(".enterme").value = '';
+       document.querySelector(".enterme").value = '';
        document.querySelector(".enteryou").value = '';
     }
+
+   
 }
 
 
@@ -134,6 +136,7 @@ function addList(e){
    ui.addItemToList(items);
 
    ui.clearFields();
+
 
     console.log(items);
     
