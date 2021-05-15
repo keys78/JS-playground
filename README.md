@@ -1,2 +1,2 @@
 # JS-playground
-A code playground where Itest and write codes
+A code playground where I test and write codes
